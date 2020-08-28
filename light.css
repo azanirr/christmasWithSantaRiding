@@ -1,0 +1,199 @@
+body{
+	background: #525252;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #3d72b4, #525252);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #3d72b4, #525252); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	display: flex;
+	justify-content: center;
+	font-family: Roboto;
+}
+
+#snow-fall{
+	position: absolute;
+	top: 100px;
+	width: 80vh;
+	height:80vh;
+}
+
+.main{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 70%;
+}
+
+.red{
+	background: #ee0979;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	animation: lampred 1s infinite;
+}
+
+.green{
+	background: #a8ff78;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #78ffd6, #a8ff78);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #78ffd6, #a8ff78); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	animation: lampgreen 1s infinite;
+}
+
+.purple{
+	background: #f953c6;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #b91d73, #f953c6);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #b91d73, #f953c6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	animation: lamppurple 1s infinite;
+}
+
+.blue{
+	background: #2980B9;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	animation: lampblue 1s infinite;
+}
+
+.yellow{
+	background: #fffc00;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ffffff, #fffc00);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ffffff, #fffc00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	animation: lampyellow 1s infinite;
+}
+
+.circle{
+	border: 0px solid #ccc;
+	width: 50px;
+	height: 40px;
+	border-radius: 50%;
+	margin: 10px 20px;
+	position: relative;
+	transition: 1s all ease;
+}
+
+.circle:before{
+	position: absolute;
+	content: '';
+	height: 15px;
+	width: 15px;
+	left: 17.5px;
+	top: -15px;
+	margin: 0;
+	padding: 0;
+	display: block;
+	background: rgb(68, 53, 73);
+ 	border-radius: 2px;
+  	display: inline-block;
+  	border-bottom: 2px solid rgb(97, 81, 107);
+}
+
+.circle:after {
+  	position: absolute;
+  	content: "";
+  	top: -20px;
+  	left: 34px;
+  	position: absolute;
+  	width: 75px;
+  	height: 18.6666666667px;
+  	border-bottom: solid #222 2px;
+  	border-radius: 50%;
+}
+
+.circle:last-child::after {
+	content: '';
+	position: absolute;
+	border: none;
+}
+
+.lightrope{
+	display: flex;
+	justify-content: center;
+}
+
+
+@keyframes lampred {
+  0%,
+  100% {
+    box-shadow: 0 0 20px 5px salmon;
+  }
+  50% {
+    box-shadow: none;
+  }
+}
+@keyframes lampgreen {
+  0%,
+  100% {
+    box-shadow: 0 0 20px 5px #99FF33;
+  }
+  50% {
+    box-shadow: none;
+  }
+}
+@keyframes lamppurple{
+  0%,
+  100% {
+    box-shadow: none;
+  }
+  50% {
+    box-shadow: 0 0 20px 5px #FF66FF;
+  }
+}
+@keyframes lampblue {
+  0%,
+  100% {
+    box-shadow: 0 0 20px 5px #00CCCC;
+  }
+  50% {
+    box-shadow: none;
+  }
+}
+@keyframes lampyellow {
+  0%,
+  100% {
+    box-shadow:none;
+  }
+  50% {
+    box-shadow:  0 0 20px 5px #FFFF66;
+  }
+}
+
+.title{
+	position: absolute;
+	top:200px;
+}
+div h1{
+	color: white;
+	font-size: 90px;
+	animation: title 2s infinite;
+	font-weight: 700 italic;
+}
+
+@keyframes title{
+	0,
+	100%{
+		text-shadow: none;
+	}
+	50%{
+		 text-shadow: 0 0 50px white;
+	}
+}
+
+
+.santa{
+	position: absolute;
+	top: 300px;
+	left: 0px;
+	animation: drives 5s infinite linear,
+				jump 2s ease infinite;
+
+}
+
+@keyframes drives{
+	from{transform: translateX(-200px)}
+	to{transform: translateX(1400px)}
+}
+
+@keyframes jump{
+	0%{top:300px}
+	50%{top:150px}
+	100%{top:300px;}
+}
